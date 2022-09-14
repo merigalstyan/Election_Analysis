@@ -2,17 +2,25 @@
 
 ## Purpose
 
-The purpose of this project was to look at the given election data from several counties, analyze it and find outcomes. 
-The analysis included:
+The purpose of the election audit analysis  was to look at the given election data from several counties, analyze it and find outcomes. 
+The first part of the analysis includes:
 
-* Finding the total number of votes.
-* Finding the candidates and calculating the total votes each candidate received.
-* Calculating the percentage of votes each candidate received.
+* Finding the total number of votes cast in the congressional election.
+* Calculating each candidate’s total votes and percentage of those votes.
 * Finding the winning candidate.
+
+The second section of the analysis includes:
+
+* Finding each county and its total vote count.
+* Calculating each county's percentage of the total votes.
+* Finding the county with the largest number of voters.
+
+
 
 ## Analysis
 
 ### Dependencies
+
 The initial step of the analysis included adding dependencies **csv** and **os**. ***Csv** is necessary for spreadsheets and **os** would help finding the path to our election data.
 
 **Here's how the code looks:**
@@ -20,9 +28,9 @@ The initial step of the analysis included adding dependencies **csv** and **os**
 
 <img width="553" alt="Screen Shot 2022-09-13 at 3 53 03 PM" src="https://user-images.githubusercontent.com/111609994/190023684-c2a3a743-06b1-4c5b-b8fd-edcc4d6502b8.png">
 
-## Total votes, candidates and percentage of votes
+## Analysis: Section 1
 
-Next part of these analysis was to open and read the **csv** data, loop through the rows of the data and increment the total vote count by one to find the total number of votes which was equal to **369,711**. In order to find the names of the candidates and the votes they received, I initialized **candidate_options** as an empty list, then, inside the **for** loop each candidate_name was appended to candidate_options list. 
+The first part of the analysis was to open and read the **csv** data, loop through the rows of the spreadsheet and increment the total vote count by one to find * *the total number of votes* * which was equal to **369,711**. In order to find the names of the candidates and the votes they received, I initialized **candidate_options** as an empty list, then, inside the **for** loop each candidate_name was appended to candidate_options list. 
 
 In addition, initializing the **candidate_votes** empty dictionary and asigning the already found candidate_name as a key I was able to increment **candidate_votes** by 1 every time the code found the name of the candidate in the spreadsheet. 
 
